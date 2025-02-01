@@ -63,7 +63,7 @@ public class HomeWork3 {
         System.out.println(maxNumber);
     }
 
-    //Решение Задачи №5
+    //Решение Задачи №5 (прошу проверить, мне кажется есть ошибка если нет второй стоки)
     public static void summElementsOfSecondString() {
         int[][] arr5 = {{1, 2, 3,}, {4, 5, 6,}, {7, 8, 9}};
         int summOfElements = 0;
