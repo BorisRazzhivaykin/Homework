@@ -7,9 +7,10 @@ public class HomeWork3 {
         printSquare(3);
         int[][] arr3 = {{1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}, {1, 1, 1, 1}};
         fillDiagonal(arr3);
-        int[][] arr4 = {{1, 5, 7, 21, 5, 6}, {5, 14, 45, 6}};
+        int[][] arr4 = {{17, -5, -7, -21, -5, -6}, {5, 14, -45, 6}};
         findMax(arr4);
-        summElementsOfSecondString();
+        int[][] arr5 = {{1, 2, 3}, {5, 2, 2, 6}, {1, 1, 1, 1}};
+        System.out.println(summElementsOfSecondString(arr5));
     }
 
     //Решение задачи №1
@@ -52,7 +53,7 @@ public class HomeWork3 {
 
     //Решение Задачи №4
     public static void findMax(int[][] arr4) {
-        int maxNumber = 0;
+        int maxNumber = arr4[0][0];
         for (int i = 0; i < arr4.length; i++) {
             for (int j = 0; j < arr4[i].length; j++) {
                 if (arr4[i][j] > maxNumber) {
@@ -64,20 +65,17 @@ public class HomeWork3 {
     }
 
     //Решение Задачи №5 (прошу проверить, мне кажется есть ошибка если нет второй стоки)
-    public static void summElementsOfSecondString() {
-        int[][] arr5 = {{1, 2, 3,}, {4, 5, 6,}, {7, 8, 9}};
+    public static int summElementsOfSecondString(int[][] arr5) {
         int summOfElements = 0;
-        for (int i = 1; i < arr5.length - 1; i++) {
-            for (int j = 0; j < arr5[i].length; j++) {
-                if (arr5.length < 1) {
-                    summOfElements = -1;
-                } else {
+        if (arr5.length < 2) {
+            summOfElements = -1;
+        } else {
+            for (int i = 1; i < arr5.length - 1; i++) {
+                for (int j = 0; j < arr5[i].length; j++) {
                     summOfElements += arr5[i][j];
                 }
             }
         }
-        System.out.println(summOfElements);
+        return summOfElements;
     }
-
-    ;
 }
