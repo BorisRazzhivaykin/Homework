@@ -69,12 +69,9 @@ public class HomeWork3 {
         int summOfElements = 0;
         if (arr5.length < 2) {
             return -1;
-        } else {
-            for (int i = 1; i < 2; i++) {
-                for (int j = 0; j < arr5[i].length; j++) {
-                    summOfElements += arr5[i][j];
-                }
-            }
+        }
+        for (int j = 0; j < arr5[1].length; j++) {
+            summOfElements += arr5[1][j];
         }
         return summOfElements;
     }
