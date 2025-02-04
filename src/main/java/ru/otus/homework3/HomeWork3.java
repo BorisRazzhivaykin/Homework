@@ -9,7 +9,7 @@ public class HomeWork3 {
         fillDiagonal(arr3);
         int[][] arr4 = {{17, -5, -7, -21, -5, -6}, {5, 14, -45, 6}};
         findMax(arr4);
-        int[][] arr5 = {{1, 2, 3}, {5, 2, 2, 6}, {1, 1, 1, 1}};
+        int[][] arr5 = {{1, 2, 3}, {50, 20, 10, 10}, {1, 1, 1, 1}};
         System.out.println(summElementsOfSecondString(arr5));
     }
 
@@ -64,7 +64,7 @@ public class HomeWork3 {
         System.out.println(maxNumber);
     }
 
-    //Решение Задачи №5 (прошу проверить, мне кажется есть ошибка если нет второй стоки)
+    //Решение Задачи №5
     public static int summElementsOfSecondString(int[][] arr5) {
         int summOfElements = 0;
         if (arr5.length < 2) {
