@@ -14,13 +14,12 @@ public class homework4 {
                 new User("Сергеев", "Сергей", "Сергеевич", 1993, "sergeev@mail.ru"),
                 new User("Алексеев", "Алексей", "Алексеевич", 1965, "alekseev@mail.ru")
         };
-
         underForty(users);
     }
 
     public static void underForty(User[] users) {
         for (int i = 0; i < users.length; i++) {
-            if (2025 - users[i].getYaerofbirth() > 40) {
+            if (2025 - users[i].getYearOfBirth() > 40) {
                 users[i].info();
             }
         }

@@ -4,7 +4,7 @@ public class User {
     private String surname;
     private String name;
     private String patronymic;
-    private int yaerofbirth;
+    private int yearOfBirth;
     private String email;
 
     public String getSurname() {
@@ -31,12 +31,12 @@ public class User {
         this.patronymic = patronymic;
     }
 
-    public int getYaerofbirth() {
-        return yaerofbirth;
+    public int getYearOfBirth() {
+        return yearOfBirth;
     }
 
-    public void setYaerofbirth(int yaerofbirth) {
-        this.yaerofbirth = yaerofbirth;
+    public void setYearOfBirth(int yearOfBirth) {
+        this.yearOfBirth = yearOfBirth;
     }
 
     public String getEmail() {
@@ -47,17 +47,17 @@ public class User {
         this.email = email;
     }
 
-    public User(String surname, String name, String patronymic, int yaerofbirth, String email) {
+    public User(String surname, String name, String patronymic, int yearOfBirth, String email) {
         this.surname = surname;
         this.name = name;
         this.patronymic = patronymic;
-        this.yaerofbirth = yaerofbirth;
+        this.yearOfBirth = yearOfBirth;
         this.email = email;
     }
 
     public void info() {
         System.out.println("Фамилия Имя Отчество: " + " " + surname + " " + name + " " + patronymic);
-        System.out.println("Год рождения: " + " " + yaerofbirth);
+        System.out.println("Год рождения: " + " " + yearOfBirth);
         System.out.println("e-mail: " + " " + email);
     }
 }
