@@ -15,6 +15,22 @@ public class homework4 {
                 new User("Алексеев", "Алексей", "Алексеевич", 1965, "alekseev@mail.ru")
         };
         underForty(users);
+        Box box1 = new Box("Желтый");
+        box1.info();
+        box1.setColor("Коричневый");
+        box1.info();
+        box1.close();
+        box1.put();
+        box1.open();
+        box1.put();
+        box1.close();
+        box1.open();
+        box1.put();
+        box1.close();
+        box1.trowAway();
+        box1.open();
+        box1.trowAway();
+        box1.close();
     }
 
     public static void underForty(User[] users) {
