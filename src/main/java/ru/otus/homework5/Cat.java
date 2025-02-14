@@ -9,7 +9,7 @@ public class Cat extends Animals {
     }
 
     @Override
-    public void info() {
-        System.out.println("Меня зовут: " + name + " , скорость бега: " + runSpeed + " , количество энергии: " + endurance);
+    protected void info() {
+        System.out.println("Кота зовут: " + name + " , скорость бега: " + runSpeed + " , количество энергии: " + endurance);
     }
 }

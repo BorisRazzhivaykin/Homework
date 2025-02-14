@@ -9,7 +9,20 @@ public class Horse extends Animals {
     }
 
     @Override
-    public void info() {
-        System.out.println("Меня зовут: " + name + " , скорость бега: " + runSpeed + " , скорость плавания: " + swimSpeed + " , количество энергии: " + endurance);
+    protected void info() {
+        System.out.println("Лошадь зовут: " + name + " , скорость бега: " + runSpeed + " , скорость плавания: " + swimSpeed + " , количество энергии: " + endurance);
     }
+
+    protected int swim(int distance) {
+        if ((distance * 4) >= endurance) {
+            System.out.println(name + " устал, проплыть не сможет");
+            return -1;
+        } else {
+            int time = distance / swimSpeed;
+            endurance = endurance - (distance * 4);
+            System.out.print(name + " проплыл за: ");
+            return time;
+        }
+    }
+
 }
