@@ -13,10 +13,10 @@ public class Cat {
 
     protected boolean eat(Plate plate) {
         if (appetite > plate.currentAmmountOfFood) {
-            System.out.println("Еды не хватает, положите еще еды");
+            System.out.println("Еды не хватает, положите еще еды, " + name + " остался голодным");
         }
         if (appetite <= plate.currentAmmountOfFood) {
-            System.out.println("кот поел, он насытился");
+            System.out.println(name + " поел, он насытился");
             satiety = true;
         }
         return satiety;
