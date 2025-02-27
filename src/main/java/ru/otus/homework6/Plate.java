@@ -1,37 +1,28 @@
 package ru.otus.homework6;
 
 public class Plate {
-    int currentAmmountOfFood; //текущее количество еды (указывается при создании тарелки)
-    protected int maxPlateVolume; // максимальный объём тарелки (указывается при создании тарелки)
-    protected int foodAmmount; //количество добавляемой еды
+    private int currentAmount;
+    private int maxAmount;
 
-    protected Plate(int currentAmmountOfFood, int maxPlateVolume) {
-        this.currentAmmountOfFood = currentAmmountOfFood;
-        this.maxPlateVolume = maxPlateVolume;
+    public Plate(int currentAmount, int maxAmount) {
+        this.currentAmount = currentAmount;
+        this.maxAmount = maxAmount;
     }
 
-    protected void putFoodInPlate() {
-        if (currentAmmountOfFood == maxPlateVolume) {
+    public void addFood(int amount) {
+        if (currentAmount + amount > maxAmount) {
             System.out.println("Тарелка полная, положить еду нельзя");
-        }
-        if (currentAmmountOfFood < maxPlateVolume) {
-            foodAmmount = maxPlateVolume - currentAmmountOfFood;
-            currentAmmountOfFood += foodAmmount;
-            System.out.println("Положили в тарелку еды в количестве: " + foodAmmount);
+        } else {
+            currentAmount += amount;
+            System.out.println("Положили в тарелку еды в количестве: " + amount);
         }
     }
 
-    protected boolean reductionOfFood(Cat cats) {
-        boolean statusOfFoodInPlate = true;
-        if (currentAmmountOfFood >= cats.appetite) {
-            currentAmmountOfFood = currentAmmountOfFood - cats.appetite;
-            System.out.println("Еды стало меньше, убавилось до: " + currentAmmountOfFood);
-            statusOfFoodInPlate = true;
+    public boolean consumeAmount(int amount) {
+        if (currentAmount - amount >= 0 && currentAmount >= amount) {
+            currentAmount -= amount;
+            return true;
         }
-        if (currentAmmountOfFood < cats.appetite) {
-            System.out.println("Нельзя уменьшить количество еды");
-            statusOfFoodInPlate = false;
-        }
-        return statusOfFoodInPlate;
+        return false;
     }
 }

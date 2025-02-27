@@ -1,23 +1,22 @@
 package ru.otus.homework6;
 
 public class Cat {
-    protected String name;
-    protected int appetite;
-    protected boolean satiety = false; //сытость
+    private String name;
+    private int appetite;
+    private boolean satiety = false;
 
-    protected Cat(String name, int appetite) {
+    public Cat(String name, int appetite) {
         this.name = name;
         this.appetite = appetite;
 
     }
 
-    protected boolean eat(Plate plate) {
-        if (appetite > plate.currentAmmountOfFood) {
-            System.out.println("Еды не хватает, положите еще еды, " + name + " остался голодным");
-        }
-        if (appetite <= plate.currentAmmountOfFood) {
-            System.out.println(name + " поел, он насытился");
-            satiety = true;
+    public boolean eat(Plate plate) {
+        satiety = plate.consumeAmount(appetite);
+        if (plate.consumeAmount(appetite) == true) {
+            System.out.println(name + " поел, он сыт");
+        } else {
+            System.out.println(name + " еды не хватило, он не поел");
         }
         return satiety;
     }
